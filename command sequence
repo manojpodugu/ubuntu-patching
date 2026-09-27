@@ -1,0 +1,24 @@
+# 1. Check current kernel
+uname -r
+
+# 2. Refresh package information
+sudo apt update
+
+# 3. See available updates
+apt list --upgradable
+
+# 4. Review/install updates
+sudo apt upgrade
+
+# 5. Check whether reboot is required
+cat /var/run/reboot-required 2>/dev/null
+
+# 6. If required, reboot during the approved maintenance window
+sudo reboot
+
+# 7. After reboot, verify kernel
+uname -r
+
+# 8. Check package status
+sudo apt update
+apt list --upgradable
